@@ -1,0 +1,21 @@
+language: generic
+dist: bionic
+
+addons:
+  apt:
+    packages:
+    - kpartx 
+    - qemu
+    - qemu-user-static
+    - binfmt-support
+    - parted
+
+before_install:
+  - export PATH="${TRAVIS_BUILD_DIR}/pimod:${PATH}"
+  - sudo sed -i '/^Defaults\tsecure_path.*$/ d' /etc/sudoers
+  - wget http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-07-12/2019-07-10-raspbian-buster-lite.zip
+  - unzip 2019-07-10-raspbian-buster-lite.zip
+
+script:
+  - sudo pimod.sh RaspbianBuster.Pifile
+  - zip RaspbianBuster.zip RaspbianBuster.img

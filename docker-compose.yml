@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pimod:
+    build: ./pimod
+    privileged: true
+    tty: true
+    volumes:
+      - /lib/modules:/lib/modules
+      - .:/pimod-ci
+      - ./pimod:/pimod
+    working_dir: /pimod-ci
+    environment:
+      - PATH:'$PATH:/pimod'
