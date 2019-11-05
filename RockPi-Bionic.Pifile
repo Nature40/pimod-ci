@@ -1,4 +1,4 @@
 FROM rockpi4b-ubuntu-bionic-minimal-20190104_2101-gpt.img 5
+TO   rockpi4b-ubuntu-bionic-minimal-20190104_2101-gpt.img
 
 RUN cat /etc/os-release
-RUN bash
