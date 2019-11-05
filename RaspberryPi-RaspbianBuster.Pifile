@@ -1,4 +1,3 @@
 FROM 2019-07-10-raspbian-buster-lite.img
-TO   2019-07-10-raspbian-buster-lite.img
 
 RUN cat /etc/os-release

@@ -1,4 +1,3 @@
 FROM openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img
-TO   openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img
 
 RUN cat /etc/os-release

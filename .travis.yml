@@ -21,3 +21,16 @@ before_install:
 script:
   - sudo pimod.sh RaspberryPi-RaspbianBuster.Pifile
   - zip RaspberryPi-RaspbianBuster.zip RaspberryPi-RaspbianBuster.img
+
+deploy:
+  provider: releases
+  api_key:
+    secure: AOyN1e2tPr8wGToOmgLQ7t1POBA3a0I+nEMDbwM6IVO/NRiaH7Hpguc4+DYw+YawKPnv8v+rSduWRkibY9v0qrtwvq8wMX/CCYOWZWZn0DXvxCu5MGjKU6pV1aTDS6osVCcKaBqf1Adlur9D0XVShiE/3gNFlJFYoDhd4+4ZmL/szTt+b93L8g02LiDRDfCGlo1AYMQeu1Lx39Bxb3TdFR8w4DFR+sd0VNEF6Efh3K+GvkQmgGi8D2CH21Pv5bne+Co4ujfGnGsf8/b9UsKpUr86GtsNr9znKyIO2Su6YdTSpyH5Aem/glHEK5hn4CBeOne/QL9sCIBsOEgBafZD/ZtB5RHPU5HPQvWztJqb4Cr98aZtpy03KYIsVJWFTGvwCqpl2XdTR7JmU+2DmgFZzUQxNzihnWO1cBzbH9TSiNmXzcmefBdoa4nVZiBffULTzksFE2rXk6WaTdFsDbGNMa5+oCsTUIhG9Pa5V7Jg3qEwDRyMwewISKoh83ZwTaCHH1qiuACbpygYCQj7Msr3Q3qERGdV3tUeCNddesZo8MsBeUgp4t+HU0JRwiNAD2jPdrt6Dm1+qYBhW8Pnqot9TpKe5f3F2mDEOUwVItyP2f1dq6YPMDPB26zKT2R6I8oYaC9wUVA6khUmRYPKvkTJX0iNUrASUIgBYDzWWy7PcHQ=
+  file:
+    - RaspberryPi-RaspbianBuster.zip
+  on:
+    tags: true
+    repo: Nature40/pimod-ci
+  overwrite: true
+  prerelease: true
+  skip_cleanup: true
