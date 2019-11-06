@@ -9,18 +9,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout repository 
+      uses: actions/checkout@v1
       with:
         submodules: recursive
-    - run: sudo apt-get update
-    - run: sudo apt-get install -y kpartx qemu qemu-user-static binfmt-support parted
-    
-    - run: wget --progress=dot:giga https://downloads.openwrt.org/releases/18.06.4/targets/brcm2708/bcm2710/openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
-    - run: gzip -d openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
-    - run: sudo pimod/pimod.sh RaspberryPi-OpenWRT.Pifile
-    - run: zip RaspberryPi-OpenWRT.zip RaspberryPi-OpenWRT.img
-    
-    - id: create_release
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y kpartx qemu qemu-user-static binfmt-support parted
+    - name: Download openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img
+      run: |
+        wget --progress=dot:giga https://downloads.openwrt.org/releases/18.06.4/targets/brcm2708/bcm2710/openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
+        gzip -d openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
+    - name: Run pimod.sh RaspberryPi-OpenWRT.Pifile
+      run: sudo pimod/pimod.sh RaspberryPi-OpenWRT.Pifile
+      
+    - name: Package RaspberryPi-OpenWRT.zip
+      run: zip RaspberryPi-OpenWRT.zip RaspberryPi-OpenWRT.img
+    - name: Create GitHub release
+      id: create_release
       uses: actions/create-release@v1.0.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,7 +36,8 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: true
-    - id: upload_release_asset
+    - name: Upload RaspberryPi-OpenWRT.zip to release
+      id: upload_release_asset
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
