@@ -1,0 +1,19 @@
+name: Test build on push
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: recursive
+    - run: sudo apt-get update
+    - run: sudo apt-get install -y kpartx qemu qemu-user-static binfmt-support parted
+    
+    - run: wget --progress=dot:giga https://downloads.openwrt.org/releases/18.06.4/targets/brcm2708/bcm2710/openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
+    - run: gzip -d openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
+    - run: sudo pimod/pimod.sh RaspberryPi-OpenWRT.Pifile
+    - run: zip RaspberryPi-OpenWRT.zip RaspberryPi-OpenWRT.img
