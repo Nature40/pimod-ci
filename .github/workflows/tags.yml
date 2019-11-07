@@ -1,4 +1,4 @@
-name: Upload image on tags
+name: Release
 
 on:
   push:
