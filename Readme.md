@@ -3,6 +3,7 @@ pimod-ci
 
 [![Test Build Status](https://github.com/Nature40/pimod-ci/workflows/Test%20Build/badge.svg)](https://github.com/Nature40/pimod-ci/actions?query=workflow%3A%22Test%20Build%22)
 [![Release Status](https://github.com/Nature40/pimod-ci/workflows/Release/badge.svg)](https://github.com/Nature40/pimod-ci/actions?query=workflow%3A%22Release%22)
+[![Build Status](https://travis-ci.org/Nature40/pimod-ci.svg?branch=master)](https://travis-ci.org/Nature40/pimod-ci)
 
 Build single-board computer operating systems images with continuous integration using [pimod](https://github.com/Nature40/pimod).
 
