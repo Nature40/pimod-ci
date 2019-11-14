@@ -1,0 +1,4 @@
+# http://mirror1.hs-esslingen.de/pub/Mirrors/centos-altarch/7.7.1908/isos/armhfp/CentOS-Userland-7-armv7hl-RaspberryPI-Minimal-1908-sda.raw.xz
+FROM CentOS-Userland-7-armv7hl-RaspberryPI-Minimal-1908-sda.raw 3
+
+RUN cat /etc/os-release
