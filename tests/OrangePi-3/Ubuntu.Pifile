@@ -1,0 +1,4 @@
+# Manual Download Required: https://drive.google.com/drive/folders/1nBS73Uc_gmrTCWNU1zLwiizgmSOS88WP
+FROM tests/OrangePi-3/OrangePi_3_xenial_server_linux4.9_no_emmc_v1.6.img
+
+RUN cat /etc/os-release
