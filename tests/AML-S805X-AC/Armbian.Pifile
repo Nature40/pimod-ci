@@ -1,0 +1,3 @@
+FROM https://dl.armbian.com/lafrite/Debian_buster_dev_minimal_nightly.7z 1
+
+RUN cat /etc/os-release
