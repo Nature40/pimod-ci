@@ -1,0 +1,3 @@
+FROM http://share.loverpi.com/board/libre-computer-project/libre-computer-board-roc-rk3328-cc/image/debian/ROC-RK3328-CC_Debian9-Arch64_20180525.img.xz 5
+
+RUN cat /etc/os-release
