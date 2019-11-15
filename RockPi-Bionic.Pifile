@@ -1,3 +1,0 @@
-FROM rockpi4b-ubuntu-bionic-minimal-20190104_2101-gpt.img 5
-
-RUN cat /etc/os-release

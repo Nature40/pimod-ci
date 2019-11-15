@@ -1,0 +1,3 @@
+FROM https://dl.radxa.com/rockpi/images/ubuntu/rockpi4b-ubuntu-bionic-minimal-20190104_2101-gpt.img.gz 5
+
+RUN cat /etc/os-release
