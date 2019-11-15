@@ -1,0 +1,3 @@
+FROM http://share.loverpi.com/board/libre-computer-project/libre-computer-board-all-h3-cc/image/ubuntu/libre-computer-all-h3-cc-h3-ubuntu-bionic-headless-mali-4.19.31+-2019-03-25.zip
+
+RUN cat /etc/os-release

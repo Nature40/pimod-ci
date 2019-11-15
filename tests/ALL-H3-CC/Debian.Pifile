@@ -1,0 +1,3 @@
+FROM http://share.loverpi.com/board/libre-computer-project/libre-computer-board-all-h3-cc/image/debian/libre-computer-all-h3-cc-h5-debian-stretch-headless-mali-4.19.55+-2019-06-26.zip
+
+RUN cat /etc/os-release
