@@ -1,0 +1,4 @@
+FROM http://de.eu.odroid.in/ubuntu_18.04lts/N2/ubuntu-18.04.3-4.9-minimal-odroid-n2-20190806.img.xz
+#INPLACE tests/ODROID-N2/Ubuntu.img
+
+RUN cat /etc/os-release
