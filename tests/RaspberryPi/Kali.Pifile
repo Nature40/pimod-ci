@@ -1,0 +1,3 @@
+FROM https://images.offensive-security.com/arm-images/kali-linux-2019.3a-rpi3-nexmon.img.xz
+
+RUN cat /etc/os-release

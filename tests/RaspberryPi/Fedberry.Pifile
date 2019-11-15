@@ -1,0 +1,3 @@
+FROM https://github.com/fedberry/fedberry/releases/download/29.1/fedberry-minimal-29.1.raw.xz
+
+RUN cat /etc/os-release

@@ -1,0 +1,3 @@
+FROM https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-07-12/2019-07-10-raspbian-buster-lite.zip
+
+RUN cat /etc/os-release

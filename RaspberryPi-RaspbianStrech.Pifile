@@ -1,3 +1,0 @@
-FROM 2018-11-13-raspbian-stretch-lite.img
-
-RUN cat /etc/os-release

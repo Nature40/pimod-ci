@@ -15,9 +15,5 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y kpartx qemu qemu-user-static binfmt-support parted
-    - name: Download openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img
-      run: |
-        wget --progress=dot:giga https://downloads.openwrt.org/releases/18.06.4/targets/brcm2708/bcm2710/openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
-        gzip -d openwrt-18.06.4-brcm2708-bcm2710-rpi-3-ext4-factory.img.gz
-    - name: Run pimod.sh RaspberryPi-OpenWRT.Pifile
-      run: sudo pimod/pimod.sh RaspberryPi-OpenWRT.Pifile
+    - name: Run pimod.sh tests/RaspberryPi/OpenWRT.Pifile
+      run: sudo pimod/pimod.sh tests/RaspberryPi/OpenWRT.Pifile
