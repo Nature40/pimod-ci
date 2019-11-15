@@ -1,0 +1,4 @@
+FROM http://de.eu.odroid.in/ubuntu_18.04lts/C2/ubuntu-18.04.3-3.16-minimal-odroid-c2-20190814.img.xz
+#INPLACE tests/ODROID-C2/Ubuntu.img
+
+RUN cat /etc/os-release
