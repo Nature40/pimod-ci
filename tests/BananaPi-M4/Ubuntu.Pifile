@@ -1,0 +1,4 @@
+# Manual download required: https://drive.google.com/file/d/1G4915FPOU4pDzbI0TCFH8wWXUGmNdlkF/view
+FROM tests/BananaPi-M4/2019-06-18-ubuntu-server-16.04-aarch64-preview-bpi-w2-m4-sd-emmc.img
+
+RUN cat /etc/os-release
