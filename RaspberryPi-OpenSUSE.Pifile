@@ -1,0 +1,4 @@
+# http://download.opensuse.org/ports/aarch64/distribution/leap/15.1/appliances/openSUSE-Leap-15.1-ARM-GNOME-raspberrypi3.aarch64-2019.05.17-Snapshot1.62.raw.xz
+FROM openSUSE-Leap-15.1-ARM-GNOME-raspberrypi3.aarch64-2019.05.17-Snapshot1.62.raw
+
+RUN cat /etc/os-release
