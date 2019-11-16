@@ -9,5 +9,3 @@ services:
       - .:/pimod-ci
       - ./pimod:/pimod
     working_dir: /pimod-ci
-    environment:
-      - PATH:'$PATH:/pimod'
